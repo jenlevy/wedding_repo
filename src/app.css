@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+:root {
+  --color-bg: #4a50a5;
+  --color-bg-alt: #5a60b8;
+  --color-pink: #f5a0d0;
+  --color-cyan: #fff58a;
+  --color-yellow: #fff58a;
+  --color-lime: #ffbbe1;
+  --color-magenta: #dd7bdf;
+  --color-white: #ffffff;
+  --color-purple: #dd7bdf;
+  --color-orange: #ffbbe1;
+  --color-border: #dd7bdf;
+
+  --font-pixel: "Press Start 2P", monospace;
+  --font-body: "VT323", "Courier New", monospace;
+
+  --max-width: 1200px;
+  --nav-height: 60px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #fff;
+  background: var(--color-bg);
+  background-image: radial-gradient(
+    circle,
+    rgba(221, 123, 223, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  line-height: 1.6;
+  cursor:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><text y='14' font-size='14'>✦</text></svg>")
+      8 8,
+    auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-pixel);
+  line-height: 1.5;
+  color: var(--color-yellow);
+}
+
+a {
+  color: var(--color-lime);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--color-magenta);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--color-pink);
+  color: var(--color-bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-section {
+  padding: 3rem 0;
+}
+
+.page-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  color: var(--color-yellow);
+  text-shadow: 2px 2px var(--color-pink);
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--color-cyan);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+}
+
+.divider {
+  width: 200px;
+  height: 4px;
+  margin: 1rem auto;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-pink),
+    var(--color-pink) 8px,
+    var(--color-cyan) 8px,
+    var(--color-cyan) 16px,
+    var(--color-yellow) 16px,
+    var(--color-yellow) 24px
+  );
+  image-rendering: pixelated;
+}
+
+.retro-box {
+  border: 3px solid var(--color-pink);
+  background: rgba(74, 80, 165, 0.7);
+  box-shadow:
+    4px 4px 0 var(--color-magenta),
+    inset 0 0 20px rgba(179, 191, 255, 0.05);
+  padding: 1.5rem;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: var(--color-pink);
+  }
+  25% {
+    color: var(--color-cyan);
+  }
+  50% {
+    color: var(--color-magenta);
+  }
+  75% {
+    color: var(--color-orange);
+  }
+  100% {
+    color: var(--color-pink);
+  }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+.rainbow {
+  animation: rainbow 3s linear infinite;
+}
