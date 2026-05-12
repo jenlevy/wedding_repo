@@ -1,0 +1,7 @@
+# Cloudflare Workers / Pages compatibility (required for SvelteKit on Pages).
+# https://kit.svelte.dev/docs/adapter-cloudflare
+# Also add the same flag in the dashboard: Workers & Pages → your project → Settings → Runtime → Compatibility flags → nodejs_als
+
+name = "wedding-repo"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_als"]

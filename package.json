@@ -7,12 +7,15 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"pages:dev": "vite build && wrangler pages dev .svelte-kit/cloudflare",
+		"pages:deploy": "vite build && wrangler pages deploy .svelte-kit/cloudflare",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^7.0.1",
+		"@cloudflare/workers-types": "^4.20260511.1",
+		"@sveltejs/adapter-cloudflare": "^7.2.8",
 		"@sveltejs/kit": "^2.57.0",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"prettier": "^3.8.3",
@@ -20,7 +23,8 @@
 		"svelte": "^5.55.2",
 		"svelte-check": "^4.4.6",
 		"typescript": "^6.0.2",
-		"vite": "^8.0.7"
+		"vite": "^8.0.7",
+		"wrangler": "^4.90.0"
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.90.1",
