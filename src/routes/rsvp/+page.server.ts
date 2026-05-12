@@ -9,10 +9,8 @@ export const actions = {
     const name = data.get("name")?.toString().trim() ?? "";
     const email = data.get("email")?.toString().trim() ?? "";
     const attending = data.get("attending")?.toString() ?? "";
-    const meal_choice = data.get("meal_choice")?.toString().trim() ?? "";
     const dietary_restrictions =
       data.get("dietary_restrictions")?.toString().trim() ?? "";
-    const plus_one_name = data.get("plus_one_name")?.toString().trim() ?? "";
     const message = data.get("message")?.toString().trim() ?? "";
 
     // TODO(learning): Implement validation here!
@@ -23,15 +21,27 @@ export const actions = {
     // Example of returning a validation error:
     //   return fail(400, { error: 'Please enter your name.', name, email, attending });
 
-    insertRsvp({
-      name,
-      email: email || undefined,
-      attending: attending === "yes",
-      meal_choice: meal_choice || undefined,
-      dietary_restrictions: dietary_restrictions || undefined,
-      plus_one_name: plus_one_name || undefined,
-      message: message || undefined,
-    });
+    try {
+      await insertRsvp({
+        name,
+        email: email || undefined,
+        attending: attending === "yes",
+        dietary_restrictions: dietary_restrictions || undefined,
+        message: message || undefined,
+      });
+    } catch (err) {
+      console.error(err);
+      const errMessage =
+        err instanceof Error ? err.message : "Could not save your RSVP.";
+      return fail(500, {
+        error: errMessage,
+        name,
+        email,
+        attending,
+        dietary_restrictions,
+        message,
+      });
+    }
 
     return { success: true };
   },

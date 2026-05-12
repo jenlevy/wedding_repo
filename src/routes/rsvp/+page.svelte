@@ -51,24 +51,8 @@
 			</fieldset>
 
 			<div class="field">
-				<label for="meal_choice">&gt; Meal Preference</label>
-				<select id="meal_choice" name="meal_choice">
-					<option value="">-- Select --</option>
-					<option value="chicken">Chicken</option>
-					<option value="fish">Fish</option>
-					<option value="vegetarian">Vegetarian</option>
-					<option value="vegan">Vegan</option>
-				</select>
-			</div>
-
-			<div class="field">
 				<label for="dietary_restrictions">&gt; Dietary Restrictions</label>
 				<input type="text" id="dietary_restrictions" name="dietary_restrictions" value={form?.dietary_restrictions ?? ''} placeholder="Allergies, preferences, etc." />
-			</div>
-
-			<div class="field">
-				<label for="plus_one_name">&gt; Plus One Name</label>
-				<input type="text" id="plus_one_name" name="plus_one_name" value={form?.plus_one_name ?? ''} placeholder="If applicable" />
 			</div>
 
 			<div class="field">
@@ -106,7 +90,6 @@
 
 	input[type="text"],
 	input[type="email"],
-	select,
 	textarea {
 		font-family: var(--font-body);
 		font-size: 1.15rem;
@@ -119,19 +102,9 @@
 	}
 
 	input:focus,
-	select:focus,
 	textarea:focus {
 		border-color: var(--color-pink);
 		box-shadow: 0 0 8px var(--color-pink);
-	}
-
-	select {
-		cursor: pointer;
-	}
-
-	select option {
-		background: var(--color-bg-alt);
-		color: var(--color-cyan);
 	}
 
 	.radio-group {
