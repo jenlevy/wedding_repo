@@ -5,14 +5,15 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { onMount } from 'svelte';
 	// @ts-ignore
-	import { ghostCursor, fairyDustCursor } from 'cursor-effects';
+	import {
+		ghostCursor,
+		fairyDustCursor
+	} from 'cursor-effects';
 
 	let { children } = $props();
 
 	onMount(() => {
-		const cursor = new fairyDustCursor(
-  {}
-  );
+		const cursor = new fairyDustCursor({});
 		return () => cursor.destroy?.();
 	});
 </script>
@@ -30,6 +31,8 @@
 
 <style>
 	main {
-		min-height: calc(100vh - var(--nav-height) - 160px);
+		min-height: calc(
+			100vh - var(--nav-height) - 160px
+		);
 	}
 </style>

@@ -1,40 +1,25 @@
 <script lang="ts">
 	import { PUBLIC_WEDDING_DATETIME } from '$env/static/public';
+	import {
+		type TimeLeft,
+		calculateTimeLeft
+	} from '$lib/utils/countdown';
 
-	interface TimeLeft {
-		days: number;
-		hours: number;
-		minutes: number;
-		seconds: number;
-	}
+	const weddingDate = new Date(
+		PUBLIC_WEDDING_DATETIME
+	);
 
-	const weddingDate = new Date(PUBLIC_WEDDING_DATETIME);
-
-	let timeLeft: TimeLeft = $state({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-
-	function calculateTimeLeft(): TimeLeft {
-		let diff = weddingDate.getTime() - Date.now();
-		if (diff >= 0) {
-			let daysLeft = Math.floor(diff / 86400000);
-			diff = diff % 86400000;
-
-			let hoursLeft = Math.floor(diff / 3600000);
-			diff = diff % 3600000;
-
-			let minutesLeft = Math.floor(diff / 60000);
-			diff = diff % 60000;
-
-			let secondsLeft = Math.floor(diff / 1000);
-			return { days: daysLeft, hours: hoursLeft, minutes: minutesLeft, seconds: secondsLeft };
-		} else {
-			return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-		}
-	}
+	let timeLeft: TimeLeft = $state({
+		days: 0,
+		hours: 0,
+		minutes: 0,
+		seconds: 0
+	});
 
 	$effect(() => {
-		timeLeft = calculateTimeLeft();
+		timeLeft = calculateTimeLeft(weddingDate);
 		const interval = setInterval(() => {
-			timeLeft = calculateTimeLeft();
+			timeLeft = calculateTimeLeft(weddingDate);
 		}, 1000);
 
 		return () => clearInterval(interval);

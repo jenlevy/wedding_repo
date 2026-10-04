@@ -7,7 +7,11 @@
 		do: '&#9889; Do'
 	};
 
-	const categories = ['eat', 'see', 'do'] as const;
+	const categories = [
+		'eat',
+		'see',
+		'do'
+	] as const;
 </script>
 
 <svelte:head>
@@ -15,22 +19,35 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title">&#9733; Things to Do &#9733;</h1>
+	<h1 class="page-title">
+		&#9733; Things to Do &#9733;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">Exploring the area? Here are our picks!</p>
+	<p class="page-subtitle">
+		Exploring the area? Here are our picks!
+	</p>
 
 	{#each categories as category}
-		{@const items = thingsToDo.filter((t) => t.category === category)}
+		{@const items = thingsToDo.filter(
+			(t) => t.category === category
+		)}
 		{#if items.length > 0}
 			<div class="category-section">
-				<h2 class="category-title">{@html categoryLabels[category]}</h2>
+				<h2 class="category-title">
+					{@html categoryLabels[category]}
+				</h2>
 				<div class="card-grid">
 					{#each items as item}
 						<div class="card retro-box">
 							<h3>{item.name}</h3>
 							<p>{item.description}</p>
 							{#if item.link}
-								<a href={item.link} target="_blank" rel="noopener noreferrer">&gt;&gt; Check it out</a>
+								<a
+									href={item.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									>&gt;&gt; Check it out</a
+								>
 							{/if}
 						</div>
 					{/each}
@@ -55,7 +72,7 @@
 
 	.card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 		max-width: 1050px;
 		margin: 0 auto;

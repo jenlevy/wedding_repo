@@ -1,12 +1,18 @@
 <div class="hero-top">
-	<div class="sparkles">&#10023; &#10023; &#10023;</div>
-	<p class="pre-title">~ Together with their families ~</p>
+	<div class="sparkles">
+		&#10023; &#10023; &#10023;
+	</div>
+	<p class="pre-title">
+		~ Together with their families ~
+	</p>
 	<h1 class="bridegroom">
 		<span>Jenna</span>
 		<span class="amp">&</span>
 		<span>Adrian</span>
 	</h1>
-	<p class="invite">invite you to celebrate their wedding!</p>
+	<p class="invite">
+		invite you to celebrate their wedding!
+	</p>
 </div>
 
 <style>

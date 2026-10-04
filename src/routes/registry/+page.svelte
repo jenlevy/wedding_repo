@@ -7,16 +7,28 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title">&#9829; Registry &#9829;</h1>
+	<h1 class="page-title">
+		&#9829; Registry &#9829;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">Your presence is the greatest gift!<br/>But if you'd like to give something more...</p>
+	<p class="page-subtitle">
+		Your presence is the greatest gift!<br />But
+		if you'd like to give something more...
+	</p>
 
 	<div class="registry-grid">
 		{#each registries as item}
-			<a href={item.url} target="_blank" rel="noopener noreferrer" class="registry-card retro-box">
+			<a
+				href={item.url}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="registry-card retro-box"
+			>
 				<h3>&#9733; {item.name} &#9733;</h3>
 				<p>{item.description}</p>
-				<span class="card-link">&gt;&gt; Visit &lt;&lt;</span>
+				<span class="card-link"
+					>&gt;&gt; Visit &lt;&lt;</span
+				>
 			</a>
 		{/each}
 	</div>
@@ -25,7 +37,10 @@
 <style>
 	.registry-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(250px, 1fr)
+		);
 		gap: 1.5rem;
 		max-width: 1050px;
 		margin: 0 auto;

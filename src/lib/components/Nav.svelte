@@ -7,7 +7,10 @@
 		{ href: '/photos', label: 'Photos' },
 		{ href: '/qa', label: 'Q + A' },
 		{ href: '/registry', label: 'Registry' },
-		{ href: '/things-to-do', label: 'Things to Do' },
+		{
+			href: '/things-to-do',
+			label: 'Things to Do'
+		},
 		{ href: '/rsvp', label: 'RSVP' }
 	];
 
@@ -28,15 +31,23 @@
 			aria-expanded={mobileOpen}
 			onclick={() => (mobileOpen = !mobileOpen)}
 		>
-			<span class="bar" class:open={mobileOpen}></span>
-			<span class="bar" class:open={mobileOpen}></span>
-			<span class="bar" class:open={mobileOpen}></span>
+			<span class="bar" class:open={mobileOpen}
+			></span>
+			<span class="bar" class:open={mobileOpen}
+			></span>
+			<span class="bar" class:open={mobileOpen}
+			></span>
 		</button>
 
 		<ul class="links" class:show={mobileOpen}>
 			{#each links as link}
 				<li>
-					<a href={link.href} class:active={page.url.pathname === link.href} onclick={closeMobile}>
+					<a
+						href={link.href}
+						class:active={page.url.pathname ===
+							link.href}
+						onclick={closeMobile}
+					>
 						{link.label}
 					</a>
 				</li>
@@ -46,7 +57,10 @@
 </nav>
 
 <div class="marquee-bar">
-	<div class="marquee-text">&#9829; Welcome to our wedding website! &#9829;</div>
+	<div class="marquee-text">
+		&#9829; Welcome to our wedding website!
+		&#9829;
+	</div>
 </div>
 
 <style>

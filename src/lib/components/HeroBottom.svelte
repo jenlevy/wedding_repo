@@ -1,15 +1,25 @@
 <script lang="ts">
 	import CountdownTimer from './CountdownTimer.svelte';
-	import { PUBLIC_WEDDING_DATE, PUBLIC_VENUE_NAME, PUBLIC_VENUE_ADDRESS } from '$env/static/public';
+	import {
+		PUBLIC_WEDDING_DATE,
+		PUBLIC_VENUE_NAME,
+		PUBLIC_VENUE_ADDRESS
+	} from '$env/static/public';
 </script>
 
 <div class="hero-bottom">
 	<div class="divider"></div>
-	<p class="date">&#9829; {PUBLIC_WEDDING_DATE} &#9829;</p>
+	<p class="date">
+		&#9829; {PUBLIC_WEDDING_DATE} &#9829;
+	</p>
 	<p class="venue">{PUBLIC_VENUE_NAME}</p>
-	<p class="address">[ {PUBLIC_VENUE_ADDRESS} ]</p>
+	<p class="address">
+		[ {PUBLIC_VENUE_ADDRESS} ]
+	</p>
 	<CountdownTimer />
-	<div class="sparkles">&#10023; &#10023; &#10023;</div>
+	<div class="sparkles">
+		&#10023; &#10023; &#10023;
+	</div>
 </div>
 
 <style>

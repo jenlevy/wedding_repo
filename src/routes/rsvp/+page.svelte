@@ -9,74 +9,143 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title">&gt;&gt; RSVP &lt;&lt;</h1>
+	<h1 class="page-title">
+		&gt;&gt; RSVP &lt;&lt;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">Let us know if you can make it!</p>
+	<p class="page-subtitle">
+		Let us know if you can make it!
+	</p>
 
 	{#if form?.success}
 		<div class="success-box retro-box">
-			<p class="success-stars">&#9733; &#9733; &#9733;</p>
+			<p class="success-stars">
+				&#9733; &#9733; &#9733;
+			</p>
 			<h2>RSVP Received!!</h2>
-			<p>Thank you so much! We can't wait to celebrate with you.</p>
-			<p class="success-stars">&#9733; &#9733; &#9733;</p>
+			<p>
+				Thank you so much! We can't wait to
+				celebrate with you.
+			</p>
+			<p class="success-stars">
+				&#9733; &#9733; &#9733;
+			</p>
 		</div>
 	{:else}
-		<form method="POST" use:enhance class="rsvp-form retro-box">
+		<form
+			method="POST"
+			use:enhance
+			class="rsvp-form retro-box"
+		>
 			{#if form?.error}
-				<div class="error-msg">!! {form.error} !!</div>
+				<div class="error-msg">
+					!! {form.error} !!
+				</div>
 			{/if}
 
 			<div class="field">
 				<label for="name">&gt; Your Name *</label>
-				<input type="text" id="name" name="name" value={form?.name ?? ''} required />
+				<input
+					type="text"
+					id="name"
+					name="name"
+					value={form?.name ?? ''}
+					required
+				/>
 			</div>
 
 			<div class="field">
 				<label for="email">&gt; Email</label>
-				<input type="email" id="email" name="email" value={form?.email ?? ''} />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value={form?.email ?? ''}
+				/>
 			</div>
 
 			<fieldset class="field">
 				<legend>&gt; Will you attend? *</legend>
 				<div class="radio-group">
 					<label class="radio-label">
-						<input type="radio" name="attending" value="yes" checked={form?.attending === 'yes'} />
+						<input
+							type="radio"
+							name="attending"
+							value="yes"
+							checked={form?.attending === 'yes'}
+						/>
 						Yes, I'll be there!
 					</label>
 					<label class="radio-label">
-						<input type="radio" name="attending" value="no" checked={form?.attending === 'no'} />
+						<input
+							type="radio"
+							name="attending"
+							value="no"
+							checked={form?.attending === 'no'}
+						/>
 						Sorry, can't make it
 					</label>
 				</div>
 			</fieldset>
 
 			<div class="field">
-				<label for="meal_choice">&gt; Meal Preference</label>
-				<select id="meal_choice" name="meal_choice">
+				<label for="meal_choice"
+					>&gt; Meal Preference</label
+				>
+				<select
+					id="meal_choice"
+					name="meal_choice"
+				>
 					<option value="">-- Select --</option>
 					<option value="chicken">Chicken</option>
 					<option value="fish">Fish</option>
-					<option value="vegetarian">Vegetarian</option>
+					<option value="vegetarian"
+						>Vegetarian</option
+					>
 					<option value="vegan">Vegan</option>
 				</select>
 			</div>
 
 			<div class="field">
-				<label for="dietary_restrictions">&gt; Dietary Restrictions</label>
-				<input type="text" id="dietary_restrictions" name="dietary_restrictions" value={form?.dietary_restrictions ?? ''} placeholder="Allergies, preferences, etc." />
+				<label for="dietary_restrictions"
+					>&gt; Dietary Restrictions</label
+				>
+				<input
+					type="text"
+					id="dietary_restrictions"
+					name="dietary_restrictions"
+					value={form?.dietary_restrictions ?? ''}
+					placeholder="Allergies, preferences, etc."
+				/>
 			</div>
 
 			<div class="field">
-				<label for="plus_one_name">&gt; Plus One Name</label>
-				<input type="text" id="plus_one_name" name="plus_one_name" value={form?.plus_one_name ?? ''} placeholder="If applicable" />
+				<label for="plus_one_name"
+					>&gt; Plus One Name</label
+				>
+				<input
+					type="text"
+					id="plus_one_name"
+					name="plus_one_name"
+					value={form?.plus_one_name ?? ''}
+					placeholder="If applicable"
+				/>
 			</div>
 
 			<div class="field">
-				<label for="message">&gt; Leave us a message!</label>
-				<textarea id="message" name="message" rows="3">{form?.message ?? ''}</textarea>
+				<label for="message"
+					>&gt; Leave us a message!</label
+				>
+				<textarea
+					id="message"
+					name="message"
+					rows="3">{form?.message ?? ''}</textarea
+				>
 			</div>
 
-			<button type="submit" class="submit-btn">&gt;&gt; Submit RSVP &lt;&lt;</button>
+			<button type="submit" class="submit-btn"
+				>&gt;&gt; Submit RSVP &lt;&lt;</button
+			>
 		</form>
 	{/if}
 </section>
@@ -98,14 +167,15 @@
 		padding: 0;
 	}
 
-	label, legend {
+	label,
+	legend {
 		font-family: var(--font-body);
 		font-size: 1.2rem;
 		color: var(--color-lime);
 	}
 
-	input[type="text"],
-	input[type="email"],
+	input[type='text'],
+	input[type='email'],
 	select,
 	textarea {
 		font-family: var(--font-body);
@@ -149,7 +219,7 @@
 		gap: 0.4rem;
 	}
 
-	input[type="radio"] {
+	input[type='radio'] {
 		accent-color: var(--color-pink);
 		width: 16px;
 		height: 16px;

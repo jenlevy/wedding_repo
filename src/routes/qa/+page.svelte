@@ -5,9 +5,8 @@
 	let openIndex: number | null = $state(null);
 
 	function toggle(index: number): void {
-		// TODO(learning): Implement this!
-		// If the clicked index is already open, close it (set to null).
-		// Otherwise, open it (set to the clicked index).
+		openIndex =
+			index === openIndex ? null : index;
 	}
 </script>
 
@@ -16,16 +15,30 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title">&#63; Questions & Answers &#63;</h1>
+	<h1 class="page-title">
+		&#63; Questions & Answers &#63;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">Everything you need to know!!</p>
+	<p class="page-subtitle">
+		Everything you need to know!!
+	</p>
 
 	<div class="faq-list">
 		{#each faqs as faq, i}
-			<div class="faq-item retro-box" class:open={openIndex === i}>
-				<button class="faq-question" onclick={() => toggle(i)}>
+			<div
+				class="faq-item retro-box"
+				class:open={openIndex === i}
+			>
+				<button
+					class="faq-question"
+					onclick={() => toggle(i)}
+				>
 					<span>&gt; {faq.question}</span>
-					<span class="toggle-icon">{openIndex === i ? '[-]' : '[+]'}</span>
+					<span class="toggle-icon"
+						>{openIndex === i
+							? '[-]'
+							: '[+]'}</span
+					>
 				</button>
 				{#if openIndex === i}
 					<div class="faq-answer">
@@ -47,7 +60,7 @@
 	}
 
 	.faq-item {
-		padding: 0;
+		padding: 0.4rem;
 	}
 
 	.faq-question {
@@ -61,7 +74,7 @@
 		cursor: pointer;
 		text-align: left;
 		font-family: var(--font-body);
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		color: var(--color-yellow);
 		transition: color 0.15s;
 	}

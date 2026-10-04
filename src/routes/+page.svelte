@@ -4,31 +4,61 @@
 	import ja1 from '$lib/assets/ja_1.jpg';
 	import ja2 from '$lib/assets/ja_2.jpg';
 	import ja4 from '$lib/assets/ja_4.jpg';
-    import ja5 from '$lib/assets/ja_5.jpg';
-    import ja6 from '$lib/assets/ja_6.jpg';
-    import ja7 from '$lib/assets/ja_7.jpg';
-    import ja8 from '$lib/assets/ja_8.jpg';
-    import ja9 from '$lib/assets/ja_9.jpg';
-
-
-
+	import ja5 from '$lib/assets/ja_5.jpg';
+	import ja6 from '$lib/assets/ja_6.jpg';
+	import ja7 from '$lib/assets/ja_7.jpg';
+	import ja8 from '$lib/assets/ja_8.jpg';
+	import ja9 from '$lib/assets/ja_9.jpg';
 
 	const slides = [
-		{ src: ja1, alt: 'Jenna and Adrian playing pool', file: 'ja_pool.jpg' },
-		{ src: ja2, alt: 'Jenna and Adrian at the bar', file: 'ja_chess.jpg' },
-		{ src: ja4, alt: 'Jenna and Adrian on the couch', file: 'ja_couch.jpg' },
-        { src: ja5, alt: 'Jenna and Adrian on the porch', file: 'ja_porch.jpg'},
-        { src: ja6, alt: 'Jenna and Adrian at the pool hall', file: 'ja_pool.jpg'},
-        { src: ja7, alt: 'Jenna and Adrian playing at the pool hall', file: 'ja_pool_2.jpg'},
-        { src: ja8, alt: 'Jenna and Adrian eating pool balls', file: 'ja_pool_balls.jpg'},
-        { src: ja9, alt: 'Jenna and Adrian in the flowers', file: 'ja_flowers.jpg'}
-
-	];  
+		{
+			src: ja1,
+			alt: 'Jenna and Adrian playing pool',
+			file: 'ja_pool.jpg'
+		},
+		{
+			src: ja2,
+			alt: 'Jenna and Adrian at the bar',
+			file: 'ja_chess.jpg'
+		},
+		{
+			src: ja4,
+			alt: 'Jenna and Adrian on the couch',
+			file: 'ja_couch.jpg'
+		},
+		{
+			src: ja5,
+			alt: 'Jenna and Adrian on the porch',
+			file: 'ja_porch.jpg'
+		},
+		{
+			src: ja6,
+			alt: 'Jenna and Adrian at the pool hall',
+			file: 'ja_pool.jpg'
+		},
+		{
+			src: ja7,
+			alt: 'Jenna and Adrian playing at the pool hall',
+			file: 'ja_pool_2.jpg'
+		},
+		{
+			src: ja8,
+			alt: 'Jenna and Adrian eating pool balls',
+			file: 'ja_pool_balls.jpg'
+		},
+		{
+			src: ja9,
+			alt: 'Jenna and Adrian in the flowers',
+			file: 'ja_flowers.jpg'
+		}
+	];
 
 	let current = $state(0);
 
 	function prev() {
-		current = (current - 1 + slides.length) % slides.length;
+		current =
+			(current - 1 + slides.length) %
+			slides.length;
 	}
 
 	function next() {
@@ -40,12 +70,19 @@
 	<title>~*~ J & A Wedding ~*~</title>
 </svelte:head>
 
-<section class="hero-section container page-section">
+<section
+	class="hero-section container page-section"
+>
 	<div class="retro-box hero-box">
 		<HeroTop />
 
 		<div class="crt-wrap">
-			<button class="slide-btn prev" onclick={prev} aria-label="Previous photo">&lt;&lt;</button>
+			<button
+				class="slide-btn prev"
+				onclick={prev}
+				aria-label="Previous photo"
+				>&lt;&lt;</button
+			>
 
 			<div class="crt-monitor">
 				<div class="crt-top-bar">
@@ -54,19 +91,32 @@
 						<span class="dot yellow"></span>
 						<span class="dot green"></span>
 					</span>
-					<span class="crt-title">{slides[current].file}</span>
+					<span class="crt-title"
+						>{slides[current].file}</span
+					>
 				</div>
 				<div class="crt-screen">
 					{#key current}
-						<img src={slides[current].src} alt={slides[current].alt} class="couple-photo" />
+						<img
+							src={slides[current].src}
+							alt={slides[current].alt}
+							class="couple-photo"
+						/>
 					{/key}
 				</div>
 				<div class="crt-bottom">
-					<span class="crt-label">[{current + 1} / {slides.length}]  &#9829; j+a.exe &#9829;</span>
+					<span class="crt-label"
+						>[{current + 1} / {slides.length}]
+						&#9829; j+a.exe &#9829;</span
+					>
 				</div>
 			</div>
 
-			<button class="slide-btn next" onclick={next} aria-label="Next photo">&gt;&gt;</button>
+			<button
+				class="slide-btn next"
+				onclick={next}
+				aria-label="Next photo">&gt;&gt;</button
+			>
 		</div>
 
 		<div class="slide-pips">
@@ -86,14 +136,23 @@
 
 <section class="welcome container page-section">
 	<div class="retro-box welcome-box">
-		<h2 class="page-title">&#9733; Welcome! &#9733;</h2>
+		<h2 class="page-title">
+			&#9733; Welcome! &#9733;
+		</h2>
 		<div class="divider"></div>
 		<p class="welcome-text">
-			We are SO excited to share this special day with you!! Browse our site to learn more about
-			our story, see photos, and let us know if you can make it!
+			We are SO excited to share this special day
+			with you!! Browse our site to learn more
+			about our story, see photos, and let us know
+			if you can make it!
 		</p>
-		<p class="under-construction">&#9888; Some pages still under construction &#9888;</p>
-		<a href="/rsvp" class="rsvp-btn">&gt;&gt; RSVP Now &lt;&lt;</a>
+		<p class="under-construction">
+			&#9888; Some pages still under construction
+			&#9888;
+		</p>
+		<a href="/rsvp" class="rsvp-btn"
+			>&gt;&gt; RSVP Now &lt;&lt;</a
+		>
 	</div>
 </section>
 
@@ -175,13 +234,19 @@
 		border-radius: 50%;
 	}
 
-	.dot.red { background: #ff5f57; }
-	.dot.yellow { background: var(--color-yellow); }
-	.dot.green { background: #28c840; }
+	.dot.red {
+		background: #ff5f57;
+	}
+	.dot.yellow {
+		background: var(--color-yellow);
+	}
+	.dot.green {
+		background: #28c840;
+	}
 
 	.crt-title {
 		font-family: var(--font-pixel);
-		font-size: 0.45rem;
+		font-size: 1rem;
 		color: var(--color-yellow);
 	}
 

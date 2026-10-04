@@ -9,9 +9,13 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title">&#9733; Photos &#9733;</h1>
+	<h1 class="page-title">
+		&#9733; Photos &#9733;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">Some of our favorite moments!!</p>
+	<p class="page-subtitle">
+		Some of our favorite moments!!
+	</p>
 
 	<!--
 		TODO(learning): Style the .gallery class below!
@@ -20,7 +24,11 @@
 	-->
 	<div class="gallery">
 		{#each photos as photo}
-			<button class="gallery-item" onclick={() => (selectedPhoto = photo.src)}>
+			<button
+				class="gallery-item"
+				onclick={() =>
+					(selectedPhoto = photo.src)}
+			>
 				<img src={photo.src} alt={photo.alt} />
 				<div class="caption">[{photo.alt}]</div>
 			</button>
@@ -29,10 +37,26 @@
 </section>
 
 {#if selectedPhoto}
-	<div class="lightbox" role="dialog" aria-modal="true">
-		<button class="lightbox-close" onclick={() => (selectedPhoto = null)} aria-label="Close">[X]</button>
-		<button class="lightbox-bg" onclick={() => (selectedPhoto = null)} aria-label="Close"></button>
-		<img src={selectedPhoto} alt="Enlarged view" class="lightbox-img" />
+	<div
+		class="lightbox"
+		role="dialog"
+		aria-modal="true"
+	>
+		<button
+			class="lightbox-close"
+			onclick={() => (selectedPhoto = null)}
+			aria-label="Close">[X]</button
+		>
+		<button
+			class="lightbox-bg"
+			onclick={() => (selectedPhoto = null)}
+			aria-label="Close"
+		></button>
+		<img
+			src={selectedPhoto}
+			alt="Enlarged view"
+			class="lightbox-img"
+		/>
 	</div>
 {/if}
 

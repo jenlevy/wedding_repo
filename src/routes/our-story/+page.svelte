@@ -7,17 +7,27 @@
 </svelte:head>
 
 <section class="container page-section">
-	<h1 class="page-title"> &#9829; Our Story &#9829;</h1>
+	<h1 class="page-title">
+		&#9829; Our Story &#9829;
+	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">The milestones that brought us here!</p>
+	<p class="page-subtitle">
+		The milestones that brought us here!
+	</p>
 
 	<div class="timeline">
 		{#each timeline as event, i}
 			<div class="timeline-item retro-box">
 				<div class="timeline-marker">
-					<span class="marker-icon">{i === timeline.length - 1 ? '&#9829;' : '&#9733;'}</span>
+					<span class="marker-icon"
+					>{i === timeline.length - 1
+						? '♥'
+						: '★'}</span
+					>
 				</div>
-				<span class="timeline-date">[{event.date}]</span>
+				<span class="timeline-date"
+					>[{event.date}]</span
+				>
 				<h3>{event.title}</h3>
 				<p>{event.description}</p>
 			</div>
@@ -51,7 +61,7 @@
 
 	.timeline-date {
 		font-family: var(--font-body);
-		font-size: 1.1rem;
+		font-size: 1.25rem;
 		color: var(--color-lime);
 		display: block;
 		margin-bottom: 0.25rem;

@@ -9,7 +9,9 @@
 			<span>&#9733;</span>
 			<span>&#9733;</span>
 		</div>
-		<p class="footnote">~ J & A's Wedding Page ~</p>
+		<p class="footnote">
+			~ J & A's Wedding Page ~
+		</p>
 		<p class="copy">&copy; {year}</p>
 	</div>
 </footer>
@@ -50,5 +52,4 @@
 		color: var(--color-purple);
 		margin-bottom: 1rem;
 	}
-
 </style>
