@@ -210,7 +210,7 @@
 		border-radius: 12px;
 		background: #1a1a2a;
 		box-shadow:
-			6px 6px 0 var(--color-purple),
+			6px 6px 0 var(--color-magenta),
 			0 0 30px rgba(221, 123, 223, 0.15);
 		overflow: hidden;
 	}
@@ -325,7 +325,7 @@
 	.welcome-text {
 		font-family: var(--font-body);
 		font-size: 1.3rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		line-height: 1.6;
 		margin-bottom: 1rem;
 	}
@@ -341,12 +341,12 @@
 	.rsvp-btn {
 		display: inline-block;
 		padding: 0.75rem 2rem;
-		background: var(--color-lime);
+		background: var(--color-light-pink);
 		color: var(--color-bg);
 		font-family: var(--font-pixel);
 		font-size: 0.65rem;
 		text-decoration: none;
-		border: 3px outset var(--color-lime);
+		border: 3px outset var(--color-light-pink);
 		cursor: pointer;
 		transition: all 0.1s;
 	}

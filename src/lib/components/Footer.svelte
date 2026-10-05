@@ -49,7 +49,7 @@
 	.copy {
 		font-family: var(--font-body);
 		font-size: 1rem;
-		color: var(--color-purple);
+		color: var(--color-magenta);
 		margin-bottom: 1rem;
 	}
 </style>

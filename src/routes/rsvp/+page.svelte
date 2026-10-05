@@ -171,7 +171,7 @@
 	legend {
 		font-family: var(--font-body);
 		font-size: 1.2rem;
-		color: var(--color-lime);
+		color: var(--color-light-pink);
 	}
 
 	input[type='text'],
@@ -181,7 +181,7 @@
 		font-family: var(--font-body);
 		font-size: 1.15rem;
 		background: rgba(0, 0, 0, 0.4);
-		border: 2px solid var(--color-cyan);
+		border: 2px solid var(--color-yellow);
 		color: var(--color-white);
 		padding: 0.6rem 0.75rem;
 		outline: none;
@@ -201,7 +201,7 @@
 
 	select option {
 		background: var(--color-bg-alt);
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 	}
 
 	.radio-group {
@@ -212,7 +212,7 @@
 
 	.radio-label {
 		font-size: 1.15rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		cursor: pointer;
 		display: flex;
 		align-items: center;
@@ -234,9 +234,9 @@
 		font-family: var(--font-pixel);
 		font-size: 0.6rem;
 		padding: 0.85rem 2rem;
-		background: var(--color-lime);
+		background: var(--color-light-pink);
 		color: var(--color-bg);
-		border: 3px outset var(--color-lime);
+		border: 3px outset var(--color-light-pink);
 		cursor: pointer;
 		align-self: center;
 		margin-top: 0.5rem;
@@ -267,7 +267,7 @@
 
 	.success-box h2 {
 		font-size: 0.9rem;
-		color: var(--color-lime);
+		color: var(--color-light-pink);
 		margin-bottom: 0.75rem;
 		text-shadow: 2px 2px var(--color-magenta);
 	}
@@ -275,7 +275,7 @@
 	.success-box p {
 		font-family: var(--font-body);
 		font-size: 1.3rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 	}
 
 	.success-stars {

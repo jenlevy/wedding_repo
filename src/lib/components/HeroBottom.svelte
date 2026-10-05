@@ -47,14 +47,14 @@
 	.venue {
 		font-family: var(--font-body);
 		font-size: 1.2rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		margin-bottom: 0.5rem;
 	}
 
 	.address {
 		font-family: var(--font-body);
 		font-size: 1rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		margin-bottom: 0.5rem;
 	}
 </style>

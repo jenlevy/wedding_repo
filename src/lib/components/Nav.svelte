@@ -4,7 +4,6 @@
 	const links = [
 		{ href: '/', label: 'Home' },
 		{ href: '/our-story', label: 'Our Story' },
-		{ href: '/photos', label: 'Photos' },
 		{ href: '/qa', label: 'Q + A' },
 		{ href: '/registry', label: 'Registry' },
 		{
@@ -94,7 +93,7 @@
 	}
 
 	.monogram:hover {
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 	}
 
 	.links {
@@ -108,7 +107,7 @@
 	.links a {
 		font-family: var(--font-body);
 		font-size: 1.1rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		text-decoration: none;
 		padding: 0.25rem 0.5rem;
 		border: 1px solid transparent;
@@ -117,8 +116,8 @@
 
 	.links a:hover {
 		color: var(--color-bg);
-		background: var(--color-cyan);
-		border-color: var(--color-cyan);
+		background: var(--color-yellow);
+		border-color: var(--color-yellow);
 	}
 
 	.links a.active {
@@ -130,7 +129,7 @@
 	.hamburger {
 		display: none;
 		background: none;
-		border: 2px solid var(--color-cyan);
+		border: 2px solid var(--color-yellow);
 		cursor: pointer;
 		padding: 0.4rem;
 		flex-direction: column;
@@ -141,7 +140,7 @@
 		display: block;
 		width: 20px;
 		height: 2px;
-		background: var(--color-cyan);
+		background: var(--color-yellow);
 		transition:
 			transform 0.3s,
 			opacity 0.3s;

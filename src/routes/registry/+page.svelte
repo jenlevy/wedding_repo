@@ -67,7 +67,7 @@
 	}
 
 	.registry-card p {
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		font-family: var(--font-body);
 		font-size: 1.15rem;
 		margin-bottom: 1rem;
@@ -77,14 +77,14 @@
 	.card-link {
 		font-family: var(--font-pixel);
 		font-size: 0.55rem;
-		color: var(--color-lime);
-		border: 2px solid var(--color-lime);
+		color: var(--color-light-pink);
+		border: 2px solid var(--color-light-pink);
 		padding: 0.4rem 0.8rem;
 		transition: all 0.15s;
 	}
 
 	.registry-card:hover .card-link {
-		background: var(--color-lime);
+		background: var(--color-light-pink);
 		color: var(--color-bg);
 	}
 </style>

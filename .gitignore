@@ -22,6 +22,10 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Photos
+src/lib/assets/**/*.jpg
+src/lib/assets/**/*.jpeg
+
 # Database
 data/*.db
 data/*.db-wal

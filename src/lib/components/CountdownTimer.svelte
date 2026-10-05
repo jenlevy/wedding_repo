@@ -56,7 +56,7 @@
 		gap: 0.5rem;
 		margin-top: 1.5rem;
 		padding: 1rem;
-		border: 2px dashed var(--color-cyan);
+		border: 2px dashed var(--color-yellow);
 		background: rgba(0, 0, 0, 0.3);
 	}
 
@@ -69,15 +69,15 @@
 	.number {
 		font-family: var(--font-pixel);
 		font-size: 1.2rem;
-		color: var(--color-lime);
+		color: var(--color-light-pink);
 		line-height: 1;
-		text-shadow: 0 0 8px var(--color-lime);
+		text-shadow: 0 0 8px var(--color-light-pink);
 	}
 
 	.label {
 		font-family: var(--font-body);
 		font-size: 1rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		margin-top: 0.3rem;
 	}
 

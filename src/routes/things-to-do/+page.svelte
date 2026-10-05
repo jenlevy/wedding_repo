@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { thingsToDo } from '$lib/data/events';
+	import { thingsToDo } from '$lib/data/thingToDo';
 
 	const categoryLabels: Record<string, string> = {
-		eat: '&#127829; Eat',
-		see: '&#128065; See',
-		do: '&#9889; Do'
+		eat: '&#x263C; Eat &#x263C;',
+		drink: '☕︎ Drink ☕︎',
+		do: '⋆⭒˚.⋆ Do ⋆⭒˚.⋆'
 	};
 
 	const categories = [
 		'eat',
-		'see',
+		'drink',
 		'do'
 	] as const;
 </script>
@@ -23,9 +23,6 @@
 		&#9733; Things to Do &#9733;
 	</h1>
 	<div class="divider"></div>
-	<p class="page-subtitle">
-		Exploring the area? Here are our picks!
-	</p>
 
 	{#each categories as category}
 		{@const items = thingsToDo.filter(
@@ -63,7 +60,7 @@
 	}
 
 	.category-title {
-		font-size: 0.8rem;
+		font-size: 1 rem;
 		color: var(--color-pink);
 		text-shadow: 1px 1px var(--color-magenta);
 		margin-bottom: 1rem;
@@ -81,33 +78,39 @@
 	.card {
 		text-align: center;
 		transition: transform 0.15s;
+		background: var(--color-yellow);
+		box-shadow: 6px 6px 0 var(--color-magenta);
+		opacity: 90%;
+
 	}
 
 	.card:hover {
 		transform: translate(-2px, -2px);
-		box-shadow: 6px 6px 0 var(--color-magenta);
+		box-shadow: 8px 8px 0 var(--color-yellow);
+		background: var(--color-magenta)
 	}
 
 	.card h3 {
-		font-size: 0.65rem;
-		color: var(--color-yellow);
+		font-size: 0.75rem;
+		color: var(--color-bg-alt);
 		margin-bottom: 0.5rem;
 	}
 
 	.card p {
 		font-family: var(--font-body);
-		font-size: 1.1rem;
-		color: var(--color-cyan);
+		font-size: 1.2rem;
+		color:var(--color-bg);
 		margin-bottom: 0.75rem;
 	}
 
 	.card a {
 		font-family: var(--font-pixel);
 		font-size: 0.5rem;
-		color: var(--color-lime);
+		color: var(--color-bg);
 	}
 
 	.card a:hover {
 		color: var(--color-pink);
+		background: var(--color-magenta)
 	}
 </style>

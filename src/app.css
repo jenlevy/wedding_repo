@@ -4,14 +4,10 @@
 	--color-bg: #4a50a5;
 	--color-bg-alt: #5a60b8;
 	--color-pink: #f5a0d0;
-	--color-cyan: #fff58a;
-	--color-yellow: #fff58a;
-	--color-lime: #ffbbe1;
+	--color-yellow: #fffabd;
+	--color-light-pink: #ffbbe1;
 	--color-magenta: #dd7bdf;
 	--color-white: #ffffff;
-	--color-purple: #dd7bdf;
-	--color-orange: #ffbbe1;
-	--color-border: #dd7bdf;
 
 	--font-pixel: 'Press Start 2P', monospace;
 	--font-body: 'VT323', 'Courier New', monospace;
@@ -56,7 +52,7 @@ h4 {
 }
 
 a {
-	color: var(--color-lime);
+	color: var(--color-light-pink);
 	text-decoration: underline;
 	text-decoration-style: wavy;
 	transition: color 0.15s;
@@ -97,7 +93,7 @@ img {
 
 .page-subtitle {
 	text-align: center;
-	color: var(--color-cyan);
+	color: var(--color-yellow);
 	font-size: 1.3rem;
 	margin-bottom: 2rem;
 	font-family: var(--font-body);
@@ -111,8 +107,8 @@ img {
 		90deg,
 		var(--color-pink),
 		var(--color-pink) 8px,
-		var(--color-cyan) 8px,
-		var(--color-cyan) 16px,
+		var(--color-yellow) 8px,
+		var(--color-yellow) 16px,
 		var(--color-yellow) 16px,
 		var(--color-yellow) 24px
 	);
@@ -153,13 +149,13 @@ img {
 		color: var(--color-pink);
 	}
 	25% {
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 	}
 	50% {
 		color: var(--color-magenta);
 	}
 	75% {
-		color: var(--color-orange);
+		color: var(--color-light-pink);
 	}
 	100% {
 		color: var(--color-pink);

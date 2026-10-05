@@ -2,9 +2,6 @@
 	<div class="sparkles">
 		&#10023; &#10023; &#10023;
 	</div>
-	<p class="pre-title">
-		~ Together with their families ~
-	</p>
 	<h1 class="bridegroom">
 		<span>Jenna</span>
 		<span class="amp">&</span>
@@ -33,7 +30,7 @@
 	.pre-title {
 		font-family: var(--font-body);
 		font-size: 1.3rem;
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		margin-bottom: 0.75rem;
 	}
 
@@ -53,6 +50,6 @@
 	.invite {
 		font-family: var(--font-body);
 		font-size: 1.4rem;
-		color: var(--color-lime);
+		color: var(--color-light-pink);
 	}
 </style>

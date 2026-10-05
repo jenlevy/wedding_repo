@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faqs } from '$lib/data/events';
+	import { faqs } from '$lib/data/faq';
 
 	// Tracks which FAQ item is currently open (null = none).
 	let openIndex: number | null = $state(null);
@@ -63,6 +63,19 @@
 		padding: 0.4rem;
 	}
 
+	.faq-item.open .faq-question {
+		background: var(--color-magenta);
+		color: var(--color-bg);
+	}
+
+	.faq-item.open .faq-answer {
+		background: var(--color-pink);
+	}
+
+	.faq-item.open .faq-answer p {
+		color: var(--color-bg);
+	}
+
 	.faq-question {
 		width: 100%;
 		background: none;
@@ -86,7 +99,7 @@
 	.toggle-icon {
 		font-family: var(--font-pixel);
 		font-size: 0.6rem;
-		color: var(--color-lime);
+		color: var(--color-light-pink);
 		flex-shrink: 0;
 		margin-left: 1rem;
 	}
@@ -98,7 +111,7 @@
 	}
 
 	.faq-answer p {
-		color: var(--color-cyan);
+		color: var(--color-yellow);
 		font-family: var(--font-body);
 		font-size: 1.15rem;
 		line-height: 1.6;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { timeline } from '$lib/data/events';
+	import { timeline } from '$lib/data/timeline';
 </script>
 
 <svelte:head>
@@ -25,11 +25,23 @@
 						: '★'}</span
 					>
 				</div>
+				<h3>{event.title}</h3>
 				<span class="timeline-date"
 					>[{event.date}]</span
 				>
-				<h3>{event.title}</h3>
 				<p>{event.description}</p>
+				{#if event.images?.length}
+					<div class="timeline-images">
+						{#each event.images as src, j}
+							<img
+								class="timeline-image"
+								{src}
+								alt="{event.imageAlt ?? event.title} ({j + 1} of {event.images.length})"
+								loading="lazy"
+							/>
+						{/each}
+					</div>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -47,6 +59,9 @@
 	.timeline-item {
 		position: relative;
 		text-align: center;
+		background: var(--color-light-pink);
+		box-shadow: 6px 6px 0 var(--color-yellow);
+
 	}
 
 	.timeline-marker {
@@ -62,7 +77,7 @@
 	.timeline-date {
 		font-family: var(--font-body);
 		font-size: 1.25rem;
-		color: var(--color-lime);
+		color: var(--color-bg-alt);
 		display: block;
 		margin-bottom: 0.25rem;
 	}
@@ -70,13 +85,28 @@
 	.timeline-item h3 {
 		font-size: 0.75rem;
 		margin-bottom: 0.5rem;
-		color: var(--color-pink);
-		text-shadow: 1px 1px var(--color-magenta);
+		color: var(--color-magenta);
+		text-shadow: 1px 1px var(--color-yellow);
 	}
 
 	.timeline-item p {
 		font-family: var(--font-body);
 		font-size: 1.15rem;
-		color: var(--color-cyan);
+		color: var(--color-bg);
+	}
+
+	.timeline-images {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.timeline-image {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border: 3px solid var(--color-pink);
+		box-shadow: 4px 4px 0 var(--color-yellow);
 	}
 </style>
