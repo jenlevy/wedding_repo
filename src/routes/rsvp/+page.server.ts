@@ -1,6 +1,6 @@
 import type { Actions } from './$types';
 import { fail } from '@sveltejs/kit';
-import { insertRsvp } from '$lib/server/db';
+import { insertRsvp } from '#lib/server/db.ts';
 
 export const actions = {
 	default: async ({ request }) => {

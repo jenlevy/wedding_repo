@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faqs } from '$lib/data/faq';
+	import { faqs } from '#lib/data/faq.ts';
 
 	// Tracks which FAQ item is currently open (null = none).
 	let openIndex: number | null = $state(null);

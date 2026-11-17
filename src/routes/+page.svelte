@@ -1,14 +1,14 @@
 <script lang="ts">
-	import HeroTop from '$lib/components/HeroTop.svelte';
-	import HeroBottom from '$lib/components/HeroBottom.svelte';
-	import ja1 from '$lib/assets/ja_1.jpg';
-	import ja2 from '$lib/assets/ja_2.jpg';
-	import ja4 from '$lib/assets/ja_4.jpg';
-	import ja5 from '$lib/assets/ja_5.jpg';
-	import ja6 from '$lib/assets/ja_6.jpg';
-	import ja7 from '$lib/assets/ja_7.jpg';
-	import ja8 from '$lib/assets/ja_8.jpg';
-	import ja9 from '$lib/assets/ja_9.jpg';
+	import HeroTop from '#lib/components/HeroTop.svelte';
+	import HeroBottom from '#lib/components/HeroBottom.svelte';
+	import ja1 from '#lib/assets/ja_1.jpg';
+	import ja2 from '#lib/assets/ja_2.jpg';
+	import ja4 from '#lib/assets/ja_4.jpg';
+	import ja5 from '#lib/assets/ja_5.jpg';
+	import ja6 from '#lib/assets/ja_6.jpg';
+	import ja7 from '#lib/assets/ja_7.jpg';
+	import ja8 from '#lib/assets/ja_8.jpg';
+	import ja9 from '#lib/assets/ja_9.jpg';
 
 	const slides = [
 		{

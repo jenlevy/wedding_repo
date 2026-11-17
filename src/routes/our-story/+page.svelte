@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { timeline } from '$lib/data/timeline';
+	import { timeline } from '#lib/data/timeline.ts';
 </script>
 
 <svelte:head>
@@ -20,9 +20,9 @@
 			<div class="timeline-item retro-box">
 				<div class="timeline-marker">
 					<span class="marker-icon"
-					>{i === timeline.length - 1
-						? '♥'
-						: '★'}</span
+						>{i === timeline.length - 1
+							? '♥'
+							: '★'}</span
 					>
 				</div>
 				<h3>{event.title}</h3>
@@ -36,7 +36,9 @@
 							<img
 								class="timeline-image"
 								{src}
-								alt="{event.imageAlt ?? event.title} ({j + 1} of {event.images.length})"
+								alt="{event.imageAlt ??
+									event.title} ({j + 1} of {event
+									.images.length})"
 								loading="lazy"
 							/>
 						{/each}
@@ -61,7 +63,6 @@
 		text-align: center;
 		background: var(--color-light-pink);
 		box-shadow: 6px 6px 0 var(--color-yellow);
-
 	}
 
 	.timeline-marker {
@@ -97,7 +98,10 @@
 
 	.timeline-images {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(220px, 1fr)
+		);
 		gap: 1rem;
 		margin-top: 1rem;
 	}

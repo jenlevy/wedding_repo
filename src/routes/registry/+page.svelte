@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { registries } from '$lib/data/registry';
+	import { registries } from '#lib/data/registry.ts';
 </script>
 
 <svelte:head>

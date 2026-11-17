@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { PUBLIC_WEDDING_DATETIME } from '$env/static/public';
+	import { PUBLIC_WEDDING_DATETIME } from '$app/env/public';
 	import {
 		type TimeLeft,
 		calculateTimeLeft
-	} from '$lib/utils/countdown';
+	} from '#lib/utils/countdown.ts';
 
 	const weddingDate = new Date(
 		PUBLIC_WEDDING_DATETIME
 	);
-
 	let timeLeft: TimeLeft = $state({
 		days: 0,
 		hours: 0,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { thingsToDo } from '$lib/data/thingToDo';
+	import { thingsToDo } from '#lib/data/thingToDo.ts';
 
 	const categoryLabels: Record<string, string> = {
 		eat: '&#x263C; Eat &#x263C;',
@@ -81,13 +81,12 @@
 		background: var(--color-yellow);
 		box-shadow: 6px 6px 0 var(--color-magenta);
 		opacity: 90%;
-
 	}
 
 	.card:hover {
 		transform: translate(-2px, -2px);
 		box-shadow: 8px 8px 0 var(--color-yellow);
-		background: var(--color-magenta)
+		background: var(--color-magenta);
 	}
 
 	.card h3 {
@@ -99,7 +98,7 @@
 	.card p {
 		font-family: var(--font-body);
 		font-size: 1.2rem;
-		color:var(--color-bg);
+		color: var(--color-bg);
 		margin-bottom: 0.75rem;
 	}
 
@@ -111,6 +110,6 @@
 
 	.card a:hover {
 		color: var(--color-pink);
-		background: var(--color-magenta)
+		background: var(--color-magenta);
 	}
 </style>
