@@ -151,7 +151,7 @@
 			&#9888;
 		</p>
 		<a href="/rsvp" class="rsvp-btn"
-			>&gt;&gt; RSVP Now &lt;&lt;</a
+			>&gt;&gt; RSVP Coming Soon &lt;&lt;</a
 		>
 	</div>
 </section>
