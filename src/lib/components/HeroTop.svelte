@@ -27,13 +27,6 @@
 		animation: rainbow 3s linear infinite;
 	}
 
-	.pre-title {
-		font-family: var(--font-body);
-		font-size: 1.3rem;
-		color: var(--color-yellow);
-		margin-bottom: 0.75rem;
-	}
-
 	.bridegroom {
 		font-size: clamp(1rem, 3.5vw, 1.8rem);
 		letter-spacing: 0.05em;
