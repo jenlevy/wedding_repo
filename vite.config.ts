@@ -19,6 +19,10 @@ export default defineConfig({
 	],
 	// better-sqlite3 is a native Node module and breaks when bundled. Remove once RSVPs move to Supabase.
 	ssr: {
-		external: ['better-sqlite3']
+		external: ['better-sqlite3'],
+		// Pre-bundling creates a second copy of Kit, so `redirect`/`fail` from app code aren't recognized in dev.
+		optimizeDeps: {
+			exclude: ['@sveltejs/kit']
+		}
 	}
 });

@@ -20,5 +20,8 @@ export const variables = defineEnvVars({
 	PUBLIC_PHOTOS_URL: {
 		public: true,
 		static: true
+	},
+	SITE_PASSWORD: {
+		description: 'Shared password guests enter to view the site'
 	}
 });
