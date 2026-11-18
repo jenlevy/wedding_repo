@@ -22,6 +22,9 @@ export const variables = defineEnvVars({
 		static: true
 	},
 	SITE_PASSWORD: {
-		description: 'Shared password guests enter to view the site'
+		description: 'Shared password guests enter to view the site',
+		// Optional here because it's a runtime secret, absent during `vite build`.
+		// auth.ts refuses every login while it's unset.
+		schema: (value) => value
 	}
 });

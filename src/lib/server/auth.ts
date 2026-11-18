@@ -30,17 +30,23 @@ function toBase64Url(bytes: Uint8Array): string {
 		.replace(/=+$/, '');
 }
 
+function requirePassword(): string {
+	if (!SITE_PASSWORD) throw new Error('SITE_PASSWORD is not set');
+	return SITE_PASSWORD;
+}
+
 // Signed with the password itself, so changing SITE_PASSWORD logs everyone out.
 export async function createSessionToken(): Promise<string> {
-	return toBase64Url(await hmac(SITE_PASSWORD, 'site-session-v1'));
+	return toBase64Url(await hmac(requirePassword(), 'site-session-v1'));
 }
 
 export async function isValidSession(token: string | undefined): Promise<boolean> {
-	if (!token) return false;
+	if (!token || !SITE_PASSWORD) return false;
 	return timingSafeEqual(encoder.encode(token), encoder.encode(await createSessionToken()));
 }
 
 export async function isCorrectPassword(attempt: string): Promise<boolean> {
+	if (!SITE_PASSWORD) return false;
 	// Comparing digests keeps the comparison constant-time regardless of input length.
 	const [a, b] = await Promise.all([
 		hmac('password-check', attempt),
