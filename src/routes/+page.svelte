@@ -1,53 +1,46 @@
 <script lang="ts">
 	import HeroTop from '#lib/components/HeroTop.svelte';
 	import HeroBottom from '#lib/components/HeroBottom.svelte';
-	import ja1 from '#lib/assets/ja_1.jpg';
-	import ja2 from '#lib/assets/ja_2.jpg';
-	import ja4 from '#lib/assets/ja_4.jpg';
-	import ja5 from '#lib/assets/ja_5.jpg';
-	import ja6 from '#lib/assets/ja_6.jpg';
-	import ja7 from '#lib/assets/ja_7.jpg';
-	import ja8 from '#lib/assets/ja_8.jpg';
-	import ja9 from '#lib/assets/ja_9.jpg';
+	import { photo } from '#lib/photos.ts';
 
 	const slides = [
 		{
-			src: ja1,
+			src: photo('home/ja_1.jpg'),
 			alt: 'Jenna and Adrian playing pool',
 			file: 'ja_pool.jpg'
 		},
 		{
-			src: ja2,
+			src: photo('home/ja_2.jpg'),
 			alt: 'Jenna and Adrian at the bar',
 			file: 'ja_chess.jpg'
 		},
 		{
-			src: ja4,
+			src: photo('home/ja_4.jpg'),
 			alt: 'Jenna and Adrian on the couch',
 			file: 'ja_couch.jpg'
 		},
 		{
-			src: ja5,
+			src: photo('home/ja_5.jpg'),
 			alt: 'Jenna and Adrian on the porch',
 			file: 'ja_porch.jpg'
 		},
 		{
-			src: ja6,
+			src: photo('home/ja_6.jpg'),
 			alt: 'Jenna and Adrian at the pool hall',
 			file: 'ja_pool.jpg'
 		},
 		{
-			src: ja7,
+			src: photo('home/ja_7.jpg'),
 			alt: 'Jenna and Adrian playing at the pool hall',
 			file: 'ja_pool_2.jpg'
 		},
 		{
-			src: ja8,
+			src: photo('home/ja_8.jpg'),
 			alt: 'Jenna and Adrian eating pool balls',
 			file: 'ja_pool_balls.jpg'
 		},
 		{
-			src: ja9,
+			src: photo('home/ja_9.jpg'),
 			alt: 'Jenna and Adrian in the flowers',
 			file: 'ja_flowers.jpg'
 		}

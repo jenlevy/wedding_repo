@@ -16,5 +16,9 @@ export const variables = defineEnvVars({
 	PUBLIC_VENUE_ADDRESS: {
 		public: true,
 		static: true
+	},
+	PUBLIC_PHOTOS_URL: {
+		public: true,
+		static: true
 	}
 });
